@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailForm = form.elements.email;
     const passwordForm = form.elements.password;
 
-    if (emailForm.value === "" || passwordForm.value === "") {
+    if (emailForm.value === "" || passwordForm.value.indexOf(" ") !== -1) {
       alert("All fields must be filled in.");
     } else {
       const formValue = {
